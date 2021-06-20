@@ -1,12 +1,14 @@
 import React from 'react';
+import BlogHeader from './blog_header'
+import BlogList from './blog_list'
 
 class Blogs extends React.Component {
     render() {
         return (
-            <div class="flex h-screen">
-                <div class="m-auto">
-                    <h3>Blogs</h3>
-                </div>
+            <div>
+                <BlogHeader />
+                <BlogList />
+
             </div>
         )
     }

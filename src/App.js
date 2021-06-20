@@ -5,7 +5,7 @@ import Navbar from './components/navbar/navbar_main.js'
 
 function App() {
   return (
-    <div>
+    <div className="font-mono">
       <header>
         <Navbar />
       </header>
