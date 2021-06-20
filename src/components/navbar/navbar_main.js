@@ -12,8 +12,8 @@ import Projects from "../projects/projecs_main"
 
 const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Projects', href: '/project', current: false },
-    { name: 'Blogs', href: '/blog', current: false },
+    { name: 'Project', href: '/project', current: false },
+    { name: 'Blog', href: '/blog', current: false },
 ]
 
 function classNames(...classes) {
