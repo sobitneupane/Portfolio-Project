@@ -2,15 +2,16 @@ import React from 'react';
 import BlogHeader from './blog_header'
 import BlogList from './blog_list'
 
-class Blogs extends React.Component {
-    render() {
-        return (
-            <div>
-                <BlogHeader />
-                <BlogList />
+import { useLocation } from "react-router-dom"
 
-            </div>
-        )
-    }
+function Blogs() {
+    return (
+        <div>
+            <BlogHeader />
+            <BlogList />
+
+        </div>
+    )
+
 }
 export default Blogs

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
+import { useLocation } from "react-router-dom";
 
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -9,6 +9,7 @@ import Home from "../home/home_main"
 import Blogs from "../blogs/blogs_main"
 import Projects from "../projects/projecs_main"
 // import NavbarUI from "./navbar_tailwind"
+
 
 const navigation = [
     { name: 'Home', href: '/' },
@@ -29,8 +30,21 @@ function Navbar() {
     function handleNavClick(index) {
         setnavClick(index)
     }
+
+    function HandleNavHighlight() {
+        const location = useLocation();
+        if (location.pathname.includes("/project")) {
+            setnavClick(1)
+        }
+        else if (location.pathname.includes("/blog")) {
+            setnavClick(2)
+        }
+        return <p />;
+    }
+
     return (
         <Router>
+            <HandleNavHighlight />
             <nav className="sticky top-0 z-50">
                 <Disclosure as="nav" className="bg-gray-700">
                     {({ open }) => (
