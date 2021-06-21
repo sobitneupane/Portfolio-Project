@@ -13,7 +13,7 @@ import Projects from "../projects/projecs_main"
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/project' },
-    { name: 'Blogs', href: '/blog' },
+    { name: 'Blog', href: '/blog' },
 ]
 
 function classNames(...classes) {
