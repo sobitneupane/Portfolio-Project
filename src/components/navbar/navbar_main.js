@@ -8,13 +8,14 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Home from "../home/home_main"
 import Blogs from "../blogs/blogs_main"
 import Projects from "../projects/projecs_main"
+import BlogMain from '../blog/blog_main';
 // import NavbarUI from "./navbar_tailwind"
 
 
 const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Projects', href: '/project' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/blogs' },
 ]
 
 function classNames(...classes) {
@@ -113,8 +114,9 @@ function Navbar() {
             <main className="relative">
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/blog" component={Blogs} />
+                    <Route path="/blogs" component={Blogs} />
                     <Route path="/project" component={Projects} />
+                    <Route path="/blog/:id" component={BlogMain} /> 
                     <Route render={() => <h1>404: page not found</h1>} />
                 </Switch>
             </main>

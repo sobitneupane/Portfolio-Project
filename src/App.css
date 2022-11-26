@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+a {
+  color: #3366CC;
+}
+
+a:hover {
+  color: #5588EE;
+}
