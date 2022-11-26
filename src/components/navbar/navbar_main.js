@@ -116,7 +116,7 @@ function Navbar() {
                     <Route path="/" exact component={Home} />
                     <Route path="/blogs" component={Blogs} />
                     <Route path="/project" component={Projects} />
-                    <Route path="/blog/:id" component={BlogMain} /> 
+                    <Route path="/blog:id" component={BlogMain} /> 
                     <Route render={() => <h1>404: page not found</h1>} />
                 </Switch>
             </main>

@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 function BlogRow(blog) {
-    console.log("debug title", blog.blog.title)
     return(
         <div className="mx-16">
                 <ul>
@@ -14,7 +13,7 @@ function BlogRow(blog) {
                                 <h2 class="font-bold text-xl type-3 md:type-4" data-component="tooltip">
                                     <Link
                                         key={blog.blog.title}
-                                        to={`blog/${blog.blog.id}`}
+                                        to={`/blog${blog.blog.id}`}
                                     >
                                     {blog.blog.title}
                                     </Link>
