@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import BlogMain from "../blog/blog_main";
 
 function BlogRow(blog) {
     console.log("debug title", blog.blog.title)
@@ -13,12 +12,12 @@ function BlogRow(blog) {
                             </time>
                             <div class="col-span-12 lg:col-span-10">
                                 <h2 class="font-bold text-xl type-3 md:type-4" data-component="tooltip">
-                                            <Link
-                                            key={blog.blog.title}
-                                            to={`/blog/${blog.blog.id}`}
-                                        >
-                                            {blog.blog.title}
-                                        </Link>
+                                    <Link
+                                        key={blog.blog.title}
+                                        to={`blog/${blog.blog.id}`}
+                                    >
+                                    {blog.blog.title}
+                                    </Link>
                                 </h2>
                                 <div class="description type-1 sm:type-2 mt-2 sm:mt-3">
                                     <p>{blog.blog.desc}
